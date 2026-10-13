@@ -1,72 +1,31 @@
 <mxfile host="65bd71144e">
     <diagram id="dWGUWg9Mh6qnEFzWdOlD" name="Page-1">
-        <mxGraphModel dx="703" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="972" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1360" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="user" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
-                    <mxGeometry height="260" width="220" x="40" y="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-h" parent="user" style="whiteSpace=wrap;html=1;fontStyle=1;" value="CustomUser" vertex="1">
-                    <mxGeometry height="30" width="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-b" parent="user" style="whiteSpace=wrap;html=1;align=left;spacingLeft=6;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;first_name&lt;/div&gt;&lt;div&gt;last_name&lt;/div&gt;&lt;div&gt;email&lt;/div&gt;&lt;div&gt;phone_number&lt;/div&gt;&lt;div&gt;gender&lt;/div&gt;&lt;div&gt;date_of_birth / age&lt;/div&gt;&lt;div&gt;role (student, tutor, admin)&lt;/div&gt;&lt;div&gt;profile_picture&lt;/div&gt;&lt;div&gt;is_active&lt;/div&gt;&lt;div&gt;date_joined&lt;/div&gt;" vertex="1">
-                    <mxGeometry height="230" width="220" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="tutor" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
-                    <mxGeometry height="240" width="220" x="720" y="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="tutor-h" parent="tutor" style="whiteSpace=wrap;html=1;fontStyle=1;" value="TutorProfile" vertex="1">
-                    <mxGeometry height="30" width="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="tutor-b" parent="tutor" style="whiteSpace=wrap;html=1;align=left;spacingLeft=6;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;user_id (OneToOne → CustomUser)&lt;/div&gt;&lt;div&gt;bio&lt;/div&gt;&lt;div&gt;years_of_experience&lt;/div&gt;&lt;div&gt;education_level&lt;/div&gt;&lt;div&gt;qualification&lt;/div&gt;&lt;div&gt;institution&lt;/div&gt;&lt;div&gt;hourly_rate&lt;/div&gt;&lt;div&gt;average_rating&lt;/div&gt;&lt;div&gt;is_verified&lt;/div&gt;" vertex="1">
-                    <mxGeometry height="210" width="220" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="subject" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
-                    <mxGeometry height="120" width="220" x="40" y="460" as="geometry"/>
-                </mxCell>
-                <mxCell id="subject-h" parent="subject" style="whiteSpace=wrap;html=1;fontStyle=1;" value="Subject" vertex="1">
-                    <mxGeometry height="30" width="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="subject-b" parent="subject" style="whiteSpace=wrap;html=1;align=left;spacingLeft=6;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;subject_name&lt;/div&gt;&lt;div&gt;subject_code&lt;/div&gt;&lt;div&gt;description&lt;/div&gt;" vertex="1">
-                    <mxGeometry height="90" width="220" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="booking" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
-                    <mxGeometry height="220" width="220" x="380" y="460" as="geometry"/>
-                </mxCell>
-                <mxCell id="booking-h" parent="booking" style="whiteSpace=wrap;html=1;fontStyle=1;" value="Booking" vertex="1">
-                    <mxGeometry height="30" width="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="booking-b" parent="booking" style="whiteSpace=wrap;html=1;align=left;spacingLeft=6;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;student_id (FK → CustomUser)&lt;/div&gt;&lt;div&gt;tutor_id (FK → TutorProfile)&lt;/div&gt;&lt;div&gt;subject_id (FK → Subject)&lt;/div&gt;&lt;div&gt;availability_slot_id (FK → AvailabilitySlot)&lt;/div&gt;&lt;div&gt;status&lt;/div&gt;&lt;div&gt;booking_date&lt;/div&gt;&lt;div&gt;notes&lt;/div&gt;&lt;div&gt;created_at&lt;/div&gt;" vertex="1">
-                    <mxGeometry height="190" width="220" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="slot" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
-                    <mxGeometry height="160" width="220" x="720" y="460" as="geometry"/>
-                </mxCell>
-                <mxCell id="slot-h" parent="slot" style="whiteSpace=wrap;html=1;fontStyle=1;" value="AvailabilitySlot" vertex="1">
-                    <mxGeometry height="30" width="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="slot-b" parent="slot" style="whiteSpace=wrap;html=1;align=left;spacingLeft=6;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;tutor_id (FK → TutorProfile)&lt;/div&gt;&lt;div&gt;date&lt;/div&gt;&lt;div&gt;start_time&lt;/div&gt;&lt;div&gt;end_time&lt;/div&gt;&lt;div&gt;is_available&lt;/div&gt;" vertex="1">
-                    <mxGeometry height="130" width="220" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="e0" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmandOne;endFill=0;startFill=0;" target="tutor" value="1:1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e1" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;" target="booking" value="1:N">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e2" edge="1" parent="1" source="tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;" target="booking" value="1:N">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e3" edge="1" parent="1" source="subject" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;" target="booking" value="1:N">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e4" edge="1" parent="1" source="slot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;" target="booking" value="1:N">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e5" edge="1" parent="1" source="tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;" target="slot" value="1:N">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
+                <mxCell id="user" parent="1" style="swimlane;startSize=0;" value="" vertex="1"><mxGeometry height="200" width="380" x="40" y="40" as="geometry"/></mxCell>
+                <mxCell id="user-h" parent="user" style="whiteSpace=wrap;html=1;fontStyle=1;" value="CustomUser (AbstractUser) - accounts" vertex="1"><mxGeometry height="30" width="380" as="geometry"/></mxCell>
+                <mxCell id="user-b" parent="user" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" value="&lt;div&gt;&lt;i&gt;&lt;font color=&quot;#888888&quot;&gt;Inherited: id, username, password, first_name,&lt;/font&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;font color=&quot;#888888&quot;&gt;last_name, is_active, is_staff, is_superuser, date_joined&lt;/font&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;email: EmailField, &lt;b&gt;unique&lt;/b&gt;&lt;/div&gt;&lt;div&gt;role: CharField, &lt;b&gt;choices&lt;/b&gt; (student, tutor), default student&lt;/div&gt;&lt;div&gt;phone_number: CharField, blank&lt;/div&gt;&lt;div&gt;gender: CharField, &lt;b&gt;choices&lt;/b&gt;, blank&lt;/div&gt;&lt;div&gt;date_of_birth: DateField, blank + null&lt;/div&gt;" vertex="1"><mxGeometry height="170" width="380" y="30" as="geometry"/></mxCell>
+                <mxCell id="tutor" parent="1" style="swimlane;startSize=0;" value="" vertex="1"><mxGeometry height="260" width="380" x="920" y="40" as="geometry"/></mxCell>
+                <mxCell id="tutor-h" parent="tutor" style="whiteSpace=wrap;html=1;fontStyle=1;" value="TutorProfile - tutors" vertex="1"><mxGeometry height="30" width="380" as="geometry"/></mxCell>
+                <mxCell id="tutor-b" parent="tutor" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;user: OneToOne → CustomUser, CASCADE&lt;/div&gt;&lt;div&gt;subjects: ManyToMany → Subject, blank&lt;/div&gt;&lt;div&gt;bio: TextField, blank&lt;/div&gt;&lt;div&gt;years_of_experience: PositiveSmallInt, default 0&lt;/div&gt;&lt;div&gt;education_level: CharField, &lt;b&gt;choices&lt;/b&gt;, blank&lt;/div&gt;&lt;div&gt;qualification: CharField, blank&lt;/div&gt;&lt;div&gt;institution: CharField, blank&lt;/div&gt;&lt;div&gt;hourly_rate: Decimal(2 dp), blank + null&lt;/div&gt;&lt;div&gt;is_verified: BooleanField, default False&lt;/div&gt;" vertex="1"><mxGeometry height="230" width="380" y="30" as="geometry"/></mxCell>
+                <mxCell id="subject" parent="1" style="swimlane;startSize=0;" value="" vertex="1"><mxGeometry height="140" width="380" x="40" y="480" as="geometry"/></mxCell>
+                <mxCell id="subject-h" parent="subject" style="whiteSpace=wrap;html=1;fontStyle=1;" value="Subject - tutors" vertex="1"><mxGeometry height="30" width="380" as="geometry"/></mxCell>
+                <mxCell id="subject-b" parent="subject" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;subject_name: CharField, &lt;b&gt;unique&lt;/b&gt;&lt;/div&gt;&lt;div&gt;subject_code: CharField, &lt;b&gt;unique&lt;/b&gt;, optional&lt;/div&gt;&lt;div&gt;description: TextField, blank&lt;/div&gt;" vertex="1"><mxGeometry height="110" width="380" y="30" as="geometry"/></mxCell>
+                <mxCell id="booking" parent="1" style="swimlane;startSize=0;" value="" vertex="1"><mxGeometry height="240" width="380" x="480" y="480" as="geometry"/></mxCell>
+                <mxCell id="booking-h" parent="booking" style="whiteSpace=wrap;html=1;fontStyle=1;" value="Booking - bookings" vertex="1"><mxGeometry height="30" width="380" as="geometry"/></mxCell>
+                <mxCell id="booking-b" parent="booking" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;student: FK → CustomUser, CASCADE&lt;/div&gt;&lt;div&gt;slot: FK → AvailabilitySlot, PROTECT&lt;/div&gt;&lt;div&gt;subject: FK → Subject, PROTECT&lt;/div&gt;&lt;div&gt;status: CharField, &lt;b&gt;choices&lt;/b&gt; (pending, confirmed,&lt;/div&gt;&lt;div&gt;&amp;nbsp;&amp;nbsp;cancelled, completed), default pending&lt;/div&gt;&lt;div&gt;notes: TextField, blank&lt;/div&gt;&lt;div&gt;created_at: DateTimeField, auto_now_add&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;font color=&quot;#888888&quot;&gt;tutor comes from slot.tutor (not stored)&lt;/font&gt;&lt;/i&gt;&lt;/div&gt;" vertex="1"><mxGeometry height="210" width="380" y="30" as="geometry"/></mxCell>
+                <mxCell id="slot" parent="1" style="swimlane;startSize=0;" value="" vertex="1"><mxGeometry height="180" width="380" x="920" y="480" as="geometry"/></mxCell>
+                <mxCell id="slot-h" parent="slot" style="whiteSpace=wrap;html=1;fontStyle=1;" value="AvailabilitySlot - tutors" vertex="1"><mxGeometry height="30" width="380" as="geometry"/></mxCell>
+                <mxCell id="slot-b" parent="slot" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" value="&lt;div&gt;id&lt;/div&gt;&lt;div&gt;tutor: FK → TutorProfile, CASCADE&lt;/div&gt;&lt;div&gt;start_at: DateTimeField&lt;/div&gt;&lt;div&gt;end_at: DateTimeField&lt;/div&gt;&lt;div&gt;&lt;b&gt;unique&lt;/b&gt; (tutor, start_at)&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;font color=&quot;#888888&quot;&gt;available = no pending/confirmed booking&lt;/font&gt;&lt;/i&gt;&lt;/div&gt;" vertex="1"><mxGeometry height="150" width="380" y="30" as="geometry"/></mxCell>
+                <mxCell id="e0" edge="1" parent="1" source="user" target="tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERzeroToOne;endFill=0;startFill=0;labelBackgroundColor=#ffffff;" value="1:0..1 (tutors only)"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="user" target="booking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;labelBackgroundColor=#ffffff;" value="1:N student"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="subject" target="booking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;labelBackgroundColor=#ffffff;" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="slot" target="booking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;labelBackgroundColor=#ffffff;" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e5" edge="1" parent="1" source="tutor" target="slot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmandOne;endArrow=ERmany;endFill=0;startFill=0;labelBackgroundColor=#ffffff;" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e6" edge="1" parent="1" source="tutor" target="subject" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmany;endArrow=ERmany;endFill=0;startFill=0;labelBackgroundColor=#ffffff;" value="N:N (TutorProfile.subjects)"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="rules" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;div&gt;&lt;b&gt;Rules enforced in validation (not drawn as fields)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;1. A slot has at most one pending/confirmed booking (cancelled frees it).&lt;/div&gt;&lt;div&gt;2. Booking.subject must be in slot.tutor.subjects.&lt;/div&gt;&lt;div&gt;3. Only role=tutor users get a TutorProfile; only role=student users book.&lt;/div&gt;&lt;div&gt;4. AvailabilitySlot.end_at must be after start_at.&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;font color=&quot;#888888&quot;&gt;Admin access comes from is_staff / is_superuser, not role.&lt;/font&gt;&lt;/i&gt;&lt;/div&gt;" vertex="1"><mxGeometry height="140" width="620" x="40" y="800" as="geometry"/></mxCell>
             </root>
         </mxGraphModel>
     </diagram>
