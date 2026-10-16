@@ -60,7 +60,7 @@ class TutorProfile(models.Model):
         blank=True
     )
     qualification = models.CharField(
-        max_length=50,
+        max_length=100,
         blank=True
     )
     institution = models.CharField(
@@ -79,3 +79,25 @@ class TutorProfile(models.Model):
 
     def __str__(self):
         return self.user.get_full_name() or self.user.get_username()
+
+
+class AvailabilitySlot(models.Model):
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["tutor", "start_at"],
+                name="unique_tutor_slot"
+            )
+        ]
+        ordering = ["start_at"]
+    tutor = models.ForeignKey(
+        "TutorProfile",
+        on_delete=models.CASCADE,
+        related_name="availability_slots",
+    )
+    start_at = models.DateTimeField()
+    end_at = models.DateTimeField()
+    #available = no pending/confirmed booking
+
+    def __str__(self):
+        return f"{self.tutor} available from {self.start_at} to {self.end_at}"
