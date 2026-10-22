@@ -1,0 +1,24 @@
+<h1>{{ tutor.user }}</h1>
+<p>Tutor profile • {{ tutor.years_of_experience }} years of experience</p>
+
+
+<h1>Subjects taught</h1>
+{% for subject in subjects %}
+    <p>{{ subject }}</p>
+{% empty %}
+    <p>No subjects available.</p>
+{% endfor %}
+
+
+
+<h1>Availability slots</h1>
+<p>{{ availability }}</p>
+{% for availability_slot in availability_slots %}
+    <p>{{ availability_slot.start_at|date:"F d, Y" }} · {{ availability_slot.start_at|time:"h:i A" }}-{{ availability_slot.end_at|time:"h:i A" }}</p>
+{% empty %}
+    <p>No slots available.</p>
+{% endfor %}
+
+
+
+

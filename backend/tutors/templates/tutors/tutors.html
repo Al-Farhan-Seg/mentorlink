@@ -1,0 +1,11 @@
+<h1>Mentorlink Tutors</h1>
+
+<ol>
+{% for tutor in  tutors%}
+    <li>
+        <a href="{% url "tutor_detail_page" tutor.id %}"> <!-- It is supposed to be the name you gave the view in the urls.py file path(......, name="this_is_used") -->
+            {{ tutor.user }}
+        </a>
+    </li>
+{% endfor %}
+</ol>
